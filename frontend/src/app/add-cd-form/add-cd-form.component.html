@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup" (ngSubmit)="addCd()">
+  <input placeholder="Title" formControlName="autor">
+  <input placeholder="Title" formControlName="nazov">
+  <select formControlName="zaner">
+    <option [value]="null" disabled selected>Vyberte zaner</option>
+    <option *ngFor="let genre of genres$ | async; index as i">{{genre.nazov}}</option>
+  </select>
+
+  <button type="submit">Pridat nove Cd</button>
+</form>
