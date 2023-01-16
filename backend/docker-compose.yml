@@ -1,30 +1,33 @@
 services:
   library:
     restart: always
-    image: sameersbn/postgresql:10-2
+    image: postgres
     environment:
-      - PG_TRUST_LOCALNET=true
-      - DB_NAME=root
-      - DB_USER=postgres
-      - DB_PASS=mysecretpassword
-      - PG_RUNDIR=/run/postgres
-      - PG_LOGDIR=/var/log/postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=root
     ports:
-      - "6432:5432"
+      - "5432:5432"
     volumes:
-      - data:/var/lib/postgresql
-      - logs:/var/log/postgresql
+      - ./data:/var/lib/postgresql
+      - ./logs:/var/log/postgresql
   backend:
-    image: cbdb/backend
+    image: orangefrodo/spring-boot-cds
     ports:
       - "8080:8080"
     depends_on:
       - library
-  frontend:
-    image: cbdb/frontend
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://library:5432/root
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=mysecretpassword
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+  react:
+    image: orangefrodo/react-cds
     ports:
-      - "4200:4200"
+      - "3000:3000"
     depends_on:
       - backend
       - library
+
 

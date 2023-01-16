@@ -1,0 +1,12 @@
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/domain/Cd.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/domain/ZanerRepository.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/domain/CdRepository.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/controller/CdController.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/domain/ZanerDto.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/domain/Zaner.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/service/CdService.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/CorsConfig.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/controller/ZanerController.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/CdDbApplication.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/domain/CdDto.java
+/home/orangefrodo/Dev/Skuska/backend/src/main/java/sk/umb/skuska/jdaxner/projekt/service/ZanerService.java
